@@ -1,0 +1,101 @@
+
+body {
+    background: -webkit-linear-gradient(-45deg, rgb(242,249,254) 86%,rgb(199,229,249) 100%);
+    background: linear-gradient(135deg, rgb(242,249,254) 86%,rgb(199,229,249) 100%);    
+    background-size: cover;
+    -webkit-background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.main {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-delay: 4s;
+    -webkit-animation-delay: 4s; 
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    text-align: center
+}
+
+hr { 
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+.intro-container,
+.rotated-block {
+  display:block;
+}
+
+.intro-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  background: url('../images/intro.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.rotated-block {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+  min-height: 180%;
+  background: rgb(255, 255, 255);
+  transform: rotate(-20deg);
+  left: -40%;
+  top: -30%;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  top: 35%;
+  left: 10%;
+}
+  
+
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+ 
+ @keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+ 
+ @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
