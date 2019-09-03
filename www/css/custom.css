@@ -1,11 +1,15 @@
 
 body {
-    background: -webkit-linear-gradient(-45deg, rgb(242,249,254) 86%,rgb(199,229,249) 100%);
-    background: linear-gradient(135deg, rgb(242,249,254) 86%,rgb(199,229,249) 100%);    
+    background: -webkit-linear-gradient(-45deg, rgba(250,250,250,1) 0%, rgba(250,250,250,1) 43%, rgba(240,240,240,1) 66%, rgba(202,201,202,1) 96%, rgba(202,201,202,1) 100%);
+    background: linear-gradient(135deg, rgba(250,250,250,1) 0%, rgba(250,250,250,1) 43%, rgba(240,240,240,1) 66%, rgba(202,201,202,1) 96%, rgba(202,201,202,1) 100%);
     background-size: cover;
     -webkit-background-size: cover;
     height: 100vh;
     width: 100%;
+}
+
+html {
+    font-size: 15px;
 }
 
 .main {
@@ -24,6 +28,8 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
+    width: 30%;
+    height: 50%;
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
     -webkit-transform: translate(-50%, -50%);
@@ -59,7 +65,7 @@ article.intro-container {
   background: url('../images/intro.jpeg') no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
-  font-size: 25px;
+  font-size: 2rem;
   font-family: 'Great Vibes', cursive;
 }
 
@@ -75,10 +81,15 @@ article.intro-container {
 }
 
 article.intro-container .content {
-  position: relative;
+  position: absolute;
   z-index: 2;
   top: 35%;
-  left: 10%;
+  left: 15%;
+  transform: rotate(20deg);
+}
+
+article.intro-container h1{
+    font-size: 3rem;
 }
 
 @media screen and (max-width : 1200px){
@@ -107,8 +118,17 @@ article.intro-container .content {
     }
 
     article.intro-container .content {
-        top: 60%;
-        left: 5%;
+        left: 25%;
+    }
+}
+
+@media screen and (orientation : portrait) and (max-width : 480px){
+    article.intro-container {
+        font-size: 1.5rem;
+    }
+
+    article.intro-container h1{
+        font-size: 2rem;
     }
 }
 
