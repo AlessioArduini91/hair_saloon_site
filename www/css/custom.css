@@ -4,7 +4,6 @@ body {
     background: linear-gradient(135deg, rgba(250,250,250,1) 0%, rgba(250,250,250,1) 43%, rgba(240,240,240,1) 66%, rgba(202,201,202,1) 96%, rgba(202,201,202,1) 100%);
     background-size: cover;
     -webkit-background-size: cover;
-    height: 100vh;
     width: 100%;
 }
 
@@ -46,8 +45,6 @@ img {
     object-fit: contain;
 }
 
-
-
 .intro-container,
 .rotated-block {
   display:block;
@@ -68,7 +65,7 @@ article.intro-container {
 .rotated-block {
   position: absolute;
   z-index: 1;
-  width: 30%;
+  width: 35%;
   min-height: 220%;
   background: rgb(255, 255, 255);
   transform: rotate(-20deg);
@@ -88,39 +85,12 @@ article.intro-container h1{
     font-size: 3rem;
 }
 
-/* hr { 
-    border: 0; 
-    height: 1px; 
-    width: 95%;
-    background-image: -webkit-linear-gradient(left, #c44646, #8c8b8b, #c44646);
-    background-image: -moz-linear-gradient(left, #c44646, #8c8b8b, #c44646);
-    background-image: -ms-linear-gradient(left, #c44646, #8c8b8b, #c44646);
-    background-image: -o-linear-gradient(left, #c44646, #8c8b8b, #c44646); 
-    text-align: center;
-    padding:0;
-}
-
-hr:after {
-    content:" ";
-    display: inline-block;
-    position: relative;
-    top: -0.5em;
-    font-size: 4em;
-    padding: 19px 1.75em;
-    background: #fff url('../images/main-logo.png') no-repeat scroll center;
-    background-size: 90px 90px;
-    height: 50px;
-} */
-
-
 hr {
     position: relative;
-    outline: 0;
     border: 0;
-    color: black;
     text-align: center;
     height: 6em;
-    opacity: .5;
+    opacity: .3;
     width: 95%;
 }
 
@@ -135,14 +105,30 @@ hr:before {
 }
 
 hr:after {
-    content: ' ';
+    content: '';
     position: relative;
     display: inline-block;
     color: black;
-    padding: 40px 40px;
-    line-height: 1.5em;      
+    padding: 40px 40px;   
     background: #F5F6F5 url('../images/main-logo.png') no-repeat scroll center;
     background-size: 100% 100%;
+}
+
+.services {
+    background-color: #d4cdad;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+}
+
+.top {
+    border-bottom: 20px solid #d4cdad;
+    border-right: 20px solid transparent;
+}
+
+.services-list {
+    list-style: none;
+    padding-left: 0px;
 }
 
 @media screen and (max-width : 1200px){
