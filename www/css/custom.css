@@ -59,7 +59,7 @@ article.intro-container {
   background-size: cover;
   -webkit-background-size: cover;
   font-size: 2rem;
-  font-family: 'Great Vibes', cursive;
+  font-family: 'EB Garamond', serif;
 }
 
 .rotated-block {
@@ -89,14 +89,14 @@ hr {
     position: relative;
     border: 0;
     text-align: center;
-    height: 6em;
+    height: 3em;
     opacity: .3;
     width: 95%;
 }
 
 hr:before {
     content: '';
-    background: linear-gradient(to right, #c44646, #8c8b8b, #c44646);
+    background:  linear-gradient(to right, rgba(196,69,69,1) 0%, rgba(0,0,0,1) 40%, transparent 42%, transparent 58%, rgba(0,0,0,1) 60%, rgba(196,69,69,1) 100%);
     position: absolute;
     left: 0;
     top: 50%;
@@ -110,15 +110,23 @@ hr:after {
     display: inline-block;
     color: black;
     padding: 40px 40px;   
-    background: #F5F6F5 url('../images/main-logo.png') no-repeat scroll center;
+    background: transparent url('../images/main-logo.png') no-repeat scroll center;
     background-size: 100% 100%;
+    top: -50%;
 }
 
 .services {
     background-color: #d4cdad;
     padding: 20px;
     text-align: center;
-    font-family: 'Great Vibes', cursive;
+    font-family: 'EB Garamond', serif;
+}
+
+.row-services {
+    background: url('../images/section-background.png') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    padding: 10px;
 }
 
 .top {
