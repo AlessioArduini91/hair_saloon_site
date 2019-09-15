@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     var windowHeight;
     var customNavbar = $("#customNavbar");
+    
 
     init();
     
@@ -15,8 +16,10 @@ $(document).ready(function () {
 });
 
 function init() {
+    var introBg = $(".intro-container-bg");
     windowHeight = window.innerHeight;
     addEventHandlers();
+    setBackgroundParallax(introBg);
 }
 
 function addEventHandlers() {
@@ -25,4 +28,11 @@ function addEventHandlers() {
             $('.navbar').show();
         }, 50);
     } 
+}
+
+function setBackgroundParallax(image) {
+    new simpleParallax(image[0], {
+        scale: 2.0,
+        overflow: true
+    });
 }
