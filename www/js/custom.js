@@ -1,38 +1,42 @@
 $(document).ready(function () {
-
     var windowHeight;
-    var customNavbar = $("#customNavbar");
-    
 
     init();
-    
-    customNavbar.on("click", "a", null, function () {
-        customNavbar.collapse('hide'); 
-        setTimeout(function() {
-            $('.navbar').hide();   
-        }, 100);
-    });
-
 });
 
 function init() {
-    var introBg = $(".intro-container-bg");
     windowHeight = window.innerHeight;
     addEventHandlers();
-    setBackgroundParallax(introBg);
+    setParallax();
+    toggleNavbar();
 }
 
 function addEventHandlers() {
-    window.onscroll = function (e) {  
-        setTimeout(function() {
+    window.onscroll = function (e) {
+        setTimeout(function () {
             $('.navbar').show();
         }, 50);
-    } 
+    }
 }
 
-function setBackgroundParallax(image) {
-    new simpleParallax(image[0], {
-        scale: 2.0,
-        overflow: true
+function setParallax() {
+    var rellax = new Rellax('.rellax', {
+        speed: -5,
+        center: false,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+    });
+}
+
+function toggleNavbar() {
+    var customNavbar = $("#customNavbar");
+
+    customNavbar.on("click", "a", null, function () {
+        customNavbar.collapse('hide');
+        setTimeout(function () {
+            $('.navbar').hide();
+        }, 100);
     });
 }
