@@ -140,6 +140,24 @@ hr:after {
     padding-left: 0px;
 }
 
+.middle-bg {
+    background: url('../images/middle-background.jpeg') no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    height: 50vh;
+    margin: 10px 0px 10px 0px;
+}
+
+.middle-logo {
+    background: url('../images/main-logo-white.png') no-repeat center center;
+    background-size: contain;
+    -webkit-background-size: contain;
+}
+
+.middle-bg .row, .middle-logo {
+    height: 100%;
+}
+
 @media screen and (max-width : 1200px){
     article.intro-container {
         height: 100vh;
