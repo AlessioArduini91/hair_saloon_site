@@ -5,6 +5,7 @@ body {
     background-size: cover;
     -webkit-background-size: cover;
     width: 100%;
+    height: 100%;
 }
 
 html {
@@ -16,8 +17,8 @@ html {
     animation-fill-mode: both;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
-    animation-delay: 4s;
-    -webkit-animation-delay: 4s; 
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s; 
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }
@@ -32,12 +33,12 @@ html {
     animation-name: fadeOut;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    animation-delay: 2s;
-    -webkit-animation-delay: 2s;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
     text-align: center
 }
 
@@ -55,6 +56,31 @@ html {
   font-family: 'EB Garamond', serif;
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.team-intro-container {
+    width: 100%;
+    font-size: 2rem;
+    font-family: 'EB Garamond', serif;
+    height: 100vh;
+    background: url('../images/team-intro.jpeg') no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.team-intro-container div {
+    position: absolute;
+    top: 60%;
+    color: white;
+    text-align: center;
+    -webkit-animation-name: inByLeft;
+    animation-name: inByLeft;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
 }
 
 .intro-container-bg {
@@ -82,7 +108,7 @@ html {
   transform: rotate(20deg);
 }
 
-.intro-container h1{
+.team-intro-container h1, .intro-container h1{
     font-size: 3rem;
 }
 
@@ -164,7 +190,7 @@ hr:after {
 
 .contacts {
     background-color: #b36666;
-    height: 50vh;
+    height: 60vh;
 }
 
 .contacts span {
@@ -228,6 +254,11 @@ hr:after {
     .intro-container .content {
         left: 25%;
     }
+
+    .contacts {
+        background-color: #b36666;
+        height: 40vh;
+    }
 }
 
 @media screen and (orientation : portrait) and (max-width : 480px){
@@ -266,4 +297,14 @@ hr:after {
  @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+@-webkit-keyframes inByLeft {
+    0% {left: -100%;}
+    100% {left: 10%;}
+}
+ 
+ @keyframes inByLeft {
+    0% {left: -100%;}
+    100% {left: 10%;}
 }
