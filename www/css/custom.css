@@ -58,20 +58,31 @@ html {
   padding-right: 0px;
 }
 
+.salon-intro-container {
+    background: url('../images/salon-intro.jpeg') no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    color: white;
+}
+
 .team-intro-container {
+    background: url('../images/team-intro.jpeg') no-repeat center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    color: black;
+}
+
+.salon-intro-container, .team-intro-container, .contact-intro-container {
     width: 100%;
     font-size: 2rem;
     font-family: 'EB Garamond', serif;
     height: 100vh;
-    background: url('../images/team-intro.jpeg') no-repeat center center;
-    background-size: cover;
-    -webkit-background-size: cover;
+
 }
 
-.team-intro-container div {
+.salon-intro-container div, .team-intro-container div, .contact-intro-container div {
     position: absolute;
     top: 60%;
-    color: white;
     text-align: center;
     -webkit-animation-name: inByLeft;
     animation-name: inByLeft;
@@ -81,6 +92,14 @@ html {
     animation-fill-mode: both;
     animation-delay: 2s;
     -webkit-animation-delay: 2s;
+}
+
+.contact-intro-container div {
+    top: 40%;
+}
+
+.contact-intro-container div > h1:nth-child(1), .contact-intro-container div > h1:nth-child(2) {
+    color:#d0b525;
 }
 
 .intro-container-bg {
@@ -108,7 +127,7 @@ html {
   transform: rotate(20deg);
 }
 
-.team-intro-container h1, .intro-container h1{
+.salon-intro-container h1, .intro-container h1{
     font-size: 3rem;
 }
 
@@ -150,7 +169,7 @@ hr:after {
 }
 
 .row-services {
-    background: url('../images/section-background.png') no-repeat center center;
+    background: url('../images/services-background.png') no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     padding: 10px;
@@ -251,6 +270,10 @@ hr:after {
     height: 110%;
 }
 
+.contact-container {
+    height: 50vh;
+}
+
 @media screen and (max-width : 1200px){
     .intro-container {
         height: 100vh;
@@ -309,7 +332,7 @@ hr:after {
     }
 }
 
-@media screen and (max-width : 576px) and (orientation : portrait), screen and (max-height: 576px) and (orientation : landscape){
+@media screen and (max-width : 767px){
     .row-gallery-inverted {
         display: flex;
         flex-direction: column;

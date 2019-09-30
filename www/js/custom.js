@@ -20,14 +20,16 @@ function addEventHandlers() {
 }
 
 function setParallax() {
-    var rellax = new Rellax('.rellax', {
-        speed: -5,
-        center: false,
-        wrapper: null,
-        round: true,
-        vertical: true,
-        horizontal: false
-    });
+    if ($('.rellax').length > 0) {
+        var rellax = new Rellax('.rellax', {
+            speed: -5,
+            center: false,
+            wrapper: null,
+            round: true,
+            vertical: true,
+            horizontal: false
+        });
+    }    
 }
 
 function toggleNavbar() {
