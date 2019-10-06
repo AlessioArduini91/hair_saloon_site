@@ -1,11 +1,14 @@
-
 body {
-    background: -webkit-linear-gradient(-45deg, rgba(250,250,250,1) 0%, rgba(250,250,250,1) 43%, rgba(240,240,240,1) 66%, rgba(202,201,202,1) 96%, rgba(202,201,202,1) 100%);
-    background: linear-gradient(135deg, rgba(250,250,250,1) 0%, rgba(250,250,250,1) 43%, rgba(240,240,240,1) 66%, rgba(202,201,202,1) 96%, rgba(202,201,202,1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(250, 250, 250, 1) 0%, rgba(250, 250, 250, 1) 43%, rgba(240, 240, 240, 1) 66%, rgba(202, 201, 202, 1) 96%, rgba(202, 201, 202, 1) 100%);
+    background: linear-gradient(135deg, rgba(250, 250, 250, 1) 0%, rgba(250, 250, 250, 1) 43%, rgba(240, 240, 240, 1) 66%, rgba(202, 201, 202, 1) 96%, rgba(202, 201, 202, 1) 100%);
     background-size: cover;
     -webkit-background-size: cover;
     width: 100%;
     height: 100%;
+}
+
+:root {
+    --main-contact-color: #b36666;
 }
 
 html {
@@ -18,11 +21,10 @@ html {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     animation-delay: 2s;
-    -webkit-animation-delay: 2s; 
+    -webkit-animation-delay: 2s;
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }
-
 
 .loader {
     position: fixed;
@@ -42,20 +44,19 @@ html {
     text-align: center
 }
 
-.intro-container,
-.rotated-block {
-  display:block;
+.intro-container, .rotated-block {
+    display: block;
 }
 
-.intro-container {
-  width: 100%;
-  height: 50vh;
-  overflow: hidden;
-  font-size: 2rem;
-  position: relative;
-  font-family: 'EB Garamond', serif;
-  padding-left: 0px;
-  padding-right: 0px;
+.intro-container, .contact-intro-container {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    font-size: 2rem;
+    position: relative;
+    font-family: 'EB Garamond', serif;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .salon-intro-container {
@@ -72,12 +73,11 @@ html {
     color: black;
 }
 
-.salon-intro-container, .team-intro-container, .contact-intro-container {
+.salon-intro-container, .team-intro-container {
     width: 100%;
     font-size: 2rem;
     font-family: 'EB Garamond', serif;
     height: 100vh;
-
 }
 
 .salon-intro-container div, .team-intro-container div, .contact-intro-container div {
@@ -99,8 +99,8 @@ html {
     text-align: left;
 }
 
-.contact-intro-container div > h1:nth-child(1), .contact-intro-container div > h1:nth-child(2) {
-    color:#d0b525;
+.contact-intro-container div>h1:nth-child(2) {
+    color: var(--main-contact-color);
 }
 
 .intro-container-bg {
@@ -110,25 +110,25 @@ html {
 }
 
 .rotated-block {
-  position: absolute;
-  z-index: 1;
-  width: 35%;
-  min-height: 220%;
-  background: rgb(255, 255, 255);
-  transform: rotate(-20deg);
-  left: 10%;
-  top: -35%;
+    position: absolute;
+    z-index: 1;
+    width: 35%;
+    min-height: 220%;
+    background: rgb(255, 255, 255);
+    transform: rotate(-20deg);
+    left: 10%;
+    top: -35%;
 }
 
 .intro-container .content {
-  position: absolute;
-  z-index: 2;
-  top: 35%;
-  left: 15%;
-  transform: rotate(20deg);
+    position: absolute;
+    z-index: 2;
+    top: 35%;
+    left: 15%;
+    transform: rotate(20deg);
 }
 
-.salon-intro-container h1, .intro-container h1{
+.salon-intro-container h1, .intro-container h1 {
     font-size: 3rem;
 }
 
@@ -143,7 +143,7 @@ hr {
 
 hr:before {
     content: '';
-    background:  linear-gradient(to right, rgba(196,69,69,1) 0%, rgba(0,0,0,1) 40%, transparent 40%, transparent 60%, rgba(0,0,0,1) 60%, rgba(196,69,69,1) 100%);
+    background: linear-gradient(to right, rgba(196, 69, 69, 1) 0%, rgba(0, 0, 0, 1) 40%, transparent 40%, transparent 60%, rgba(0, 0, 0, 1) 60%, rgba(196, 69, 69, 1) 100%);
     position: absolute;
     left: 0;
     top: 50%;
@@ -156,17 +156,17 @@ hr:after {
     position: relative;
     display: inline-block;
     color: black;
-    padding: 40px 40px;   
+    padding: 40px 40px;
     background: transparent url('../images/main-logo.png') no-repeat scroll center;
     background-size: 100% 100%;
     top: -50%;
 }
 
 .services {
-    background-color: #d4cdad;
+    background-color: #d4d2c7;
     padding: 20px;
     text-align: center;
-    font-family: 'EB Garamond', serif;
+    font-family: 'Great Vibes', cursive;
 }
 
 .row-services {
@@ -177,7 +177,7 @@ hr:after {
 }
 
 .top {
-    border-bottom: 20px solid #d4cdad;
+    border-bottom: 20px solid #d4d2c7;
     border-right: 20px solid transparent;
 }
 
@@ -188,6 +188,15 @@ hr:after {
 
 .services-list li {
     margin-top: 1em;
+    font-size: 1.5em;
+}
+
+.services-list li .li-left {
+    text-align: left;
+}
+
+.services-list li .li-right {
+    text-align: right;
 }
 
 .middle-bg {
@@ -209,12 +218,12 @@ hr:after {
 }
 
 .contacts {
-    background-color: #b36666;
+    background-color: var(--main-contact-color);
     height: 60vh;
 }
 
 .contacts span {
-    color:white;
+    color: white;
     font-size: 1.6em;
     display: block;
     margin-top: 1em;
@@ -231,11 +240,19 @@ hr:after {
     text-align: center;
     color: white;
     font-family: 'EB Garamond', serif;
-    background-color: #b36666;
+    background-color: var(--main-contact-color);
+}
+
+.contacts-rounded-top {
+    border-radius: 20px 0 0 0;
+}
+
+.contacts-rounded-bottom {
+    border-radius: 0 0 20px 0;
 }
 
 .footer {
-    background-color: #647492;
+    background-color: var(--main-contact-color);
     text-align: center;
     padding: 10px;
 }
@@ -279,12 +296,12 @@ hr:after {
     font-size: 1.2rem;
     position: relative;
     font-family: 'EB Garamond', serif;
-    text-align: center;   
+    text-align: center;
     margin-top: 2rem;
 }
 
 .schedule-title {
-    color: #d0b525;
+    color: var(--main-contact-color);
 }
 
 .schedule ul {
@@ -294,106 +311,131 @@ hr:after {
     margin: 30px 0px 30px 0px;
 }
 
-.schedule ul li{
+.schedule ul li {
     margin-top: 1rem;
 }
 
-@media screen and (max-width : 1200px){
-    .intro-container {
+.time-detail span {
+    margin-left: 10px;
+}
+
+.time-detail a {
+    color: var(--main-contact-color);
+}
+
+@media screen and (max-width: 1200px) {
+    .intro-container, .contact-intro-container {
         height: 100vh;
     }
-    
     .intro-container {
         font-size: 2rem;
     }
-
-    .intro-container h1{
+    .intro-container h1 {
         font-size: 3rem;
     }
-
     .rotated-block {
         width: 50%;
         left: 5%;
     }
 }
 
-@media screen and (orientation : portrait) and (max-width : 1200px){
+@media screen and (orientation: portrait) and (max-width: 1200px) {
     .rotated-block {
         width: 80%;
         left: 5%;
     }
-
     .intro-container .content {
         left: 25%;
     }
-
     .contacts {
-        background-color: #b36666;
         height: 40vh;
     }
 }
 
-@media screen and (orientation : portrait) and (max-width : 480px){
+@media screen and (orientation: portrait) and (max-width: 480px) {
     .intro-container {
         font-size: 1.5rem;
     }
-
-    .intro-container h1{
+    .intro-container h1 {
         font-size: 2rem;
     }
 }
 
-@media screen and (orientation : landscape) and (min-width : 1200px){
+@media screen and (orientation: landscape) and (min-width: 1200px) {
     .gallery-description {
         margin-top: 10%;
     }
 }
 
-@media screen and (orientation : landscape), screen and (min-width : 480px){
+@media screen and (orientation: landscape), screen and (min-width: 480px) {
     hr:before {
-        background:  linear-gradient(to right, rgba(196,69,69,1) 0%, rgba(0,0,0,1) 40%, transparent 45%, transparent 55%, rgba(0,0,0,1) 60%, rgba(196,69,69,1) 100%);
-        
+        background: linear-gradient(to right, rgba(196, 69, 69, 1) 0%, rgba(0, 0, 0, 1) 40%, transparent 45%, transparent 55%, rgba(0, 0, 0, 1) 60%, rgba(196, 69, 69, 1) 100%);
     }
 }
 
-@media screen and (max-width : 767px){
+@media screen and (max-width: 767px) {
     .row-gallery-inverted {
         display: flex;
         flex-direction: column;
     }
-
     .row-gallery-inverted .gallery-description {
         order: 1;
     }
+    .services-list li {
+        font-size: 1.3em;
+    }
 }
-
 
 @-webkit-keyframes fadeOut {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
- 
- @keyframes fadeOut {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @-webkit-keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
- 
- @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes inByLeft {
-    0% {left: -100%;}
-    100% {left: 10%;}
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 10%;
+    }
 }
- 
- @keyframes inByLeft {
-    0% {left: -100%;}
-    100% {left: 10%;}
+
+@keyframes inByLeft {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 10%;
+    }
 }
