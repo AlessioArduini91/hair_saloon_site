@@ -30,7 +30,7 @@ html {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 20%;
+    width: 40%;
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
     -webkit-transform: translate(-50%, -50%);
@@ -143,7 +143,7 @@ hr {
 
 hr:before {
     content: '';
-    background: linear-gradient(to right, rgba(196, 69, 69, 1) 0%, rgba(0, 0, 0, 1) 40%, transparent 40%, transparent 60%, rgba(0, 0, 0, 1) 60%, rgba(196, 69, 69, 1) 100%);
+    background: linear-gradient(to right, rgba(196, 69, 69, 1) 0%, rgba(0, 0, 0, 1) 35%, transparent 36%, transparent 64%, rgba(0, 0, 0, 1) 65%, rgba(196, 69, 69, 1) 100%);
     position: absolute;
     left: 0;
     top: 50%;
@@ -157,8 +157,8 @@ hr:after {
     display: inline-block;
     color: black;
     padding: 40px 40px;
-    background: transparent url('../images/main-logo.png') no-repeat scroll center;
-    background-size: 100% 100%;
+    background: transparent url('../images/logo-transparent.png') no-repeat scroll center;
+    background-size: 120% 120%;
     top: -50%;
 }
 
@@ -166,7 +166,7 @@ hr:after {
     background-color: #d4d2c7;
     padding: 20px;
     text-align: center;
-    font-family: 'Great Vibes', cursive;
+    font-family: 'EB Garamond', sans-serif;
 }
 
 .row-services {
@@ -208,7 +208,7 @@ hr:after {
 }
 
 .middle-logo {
-    background: url('../images/main-logo-white.png') no-repeat center center;
+    background: url('../images/logo-transparent.png') no-repeat center center;
     background-size: contain;
     -webkit-background-size: contain;
 }
@@ -374,6 +374,12 @@ hr:after {
     }
 }
 
+@media screen and (orientation: portrait) and (max-width: 767px) {
+    .loader {
+        width: 60%;
+    }
+}
+
 @media screen and (orientation: landscape) and (min-width: 1200px) {
     .gallery-description {
         margin-top: 10%;
@@ -382,7 +388,13 @@ hr:after {
 
 @media screen and (orientation: landscape), screen and (min-width: 480px) {
     hr:before {
-        background: linear-gradient(to right, rgba(196, 69, 69, 1) 0%, rgba(0, 0, 0, 1) 40%, transparent 45%, transparent 55%, rgba(0, 0, 0, 1) 60%, rgba(196, 69, 69, 1) 100%);
+        background: linear-gradient(to right, rgba(196, 69, 69, 1) 0%, rgba(0, 0, 0, 1) 40%, transparent 41%, transparent 59%, rgba(0, 0, 0, 1) 60%, rgba(196, 69, 69, 1) 100%);
+    }
+}
+
+@media screen and (min-width: 800px) {
+    hr:before {
+        background: linear-gradient(to right, rgba(196, 69, 69, 1) 0%, rgba(0, 0, 0, 1) 40%, transparent 46%, transparent 54%, rgba(0, 0, 0, 1) 60%, rgba(196, 69, 69, 1) 100%);
     }
 }
 
