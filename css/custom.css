@@ -60,17 +60,17 @@ html {
 }
 
 .salon-intro-container {
-    background: url('../images/salon-intro.jpeg') no-repeat center center;
+    background: url('../images/salone_6.jpg') no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     color: white;
 }
 
 .team-intro-container {
-    background: url('../images/team-intro.jpeg') no-repeat center center;
+    background: url('../images/salone_2.jpg') no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
-    color: black;
+    color: white;
 }
 
 .salon-intro-container, .team-intro-container {
@@ -170,7 +170,7 @@ hr:after {
 }
 
 .row-services {
-    background: url('../images/services-background.png') no-repeat center center;
+    background: url('../images/salone_4.jpg') no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     padding: 10px;
@@ -200,7 +200,7 @@ hr:after {
 }
 
 .middle-bg {
-    background: url('../images/middle-background.jpeg') no-repeat center center;
+    background: url('../images/salone_5_transparent.jpg') no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     height: 50vh;
@@ -358,7 +358,7 @@ hr:after {
         left: 5%;
     }
     .intro-container .content {
-        left: 25%;
+        left: 20%;
     }
     .contacts {
         height: 40vh;
