@@ -8,7 +8,8 @@ body {
 }
 
 :root {
-    --main-contact-color: #b36666;
+    --main-contact-color: #bfb9b9;
+    --services-color: #a5a9b5;
 }
 
 html {
@@ -22,6 +23,17 @@ html {
     animation-duration: 1s;
     animation-delay: 2s;
     -webkit-animation-delay: 2s;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+.page {
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }
@@ -90,8 +102,8 @@ html {
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-    animation-delay: 2s;
-    -webkit-animation-delay: 2s;
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
 }
 
 .contact-intro-container div {
@@ -99,8 +111,8 @@ html {
     text-align: left;
 }
 
-.contact-intro-container div>h1:nth-child(2) {
-    color: var(--main-contact-color);
+.contact-intro-container div>h1:nth-child(1) {
+    color: var(--services-color);
 }
 
 .intro-container-bg {
@@ -167,10 +179,13 @@ hr:after {
     padding: 20px;
     text-align: center;
     font-family: 'EB Garamond', sans-serif;
+    opacity: 0.9;
+    color: #42404c;
+    font-weight: bold;
 }
 
 .row-services {
-    background: url('../images/salone_4.jpg') no-repeat center center;
+    background: url('../images/salone_1.jpg') no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     padding: 10px;
@@ -200,7 +215,7 @@ hr:after {
 }
 
 .middle-bg {
-    background: url('../images/salone_5_transparent.jpg') no-repeat center center;
+    background: url('../images/salone_8.jpg') no-repeat center center;
     background-size: cover;
     -webkit-background-size: cover;
     height: 50vh;
@@ -218,7 +233,7 @@ hr:after {
 }
 
 .contacts {
-    background-color: var(--main-contact-color);
+    background-color: #ababab;
     height: 60vh;
 }
 
@@ -231,7 +246,7 @@ hr:after {
 
 .contacts .contact {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translate(0%, -50%);
     text-align: center;
 }
@@ -240,7 +255,7 @@ hr:after {
     text-align: center;
     color: white;
     font-family: 'EB Garamond', serif;
-    background-color: var(--main-contact-color);
+    background-color: #ababab;
 }
 
 .contacts-rounded-top {
@@ -252,6 +267,7 @@ hr:after {
 }
 
 .footer {
+    font-family: 'EB Garamond', serif;
     background-color: var(--main-contact-color);
     text-align: center;
     padding: 10px;
@@ -267,10 +283,9 @@ hr:after {
     font-size: 1.2rem;
     font-family: 'EB Garamond', serif;
     text-align: center;
-    
 }
 
-.history > p {
+.history>p {
     margin-bottom: 50px;
     margin-top: 20px;
     text-align: left;
@@ -294,7 +309,7 @@ hr:after {
 .img-overlay:after {
     content: '';
     position: absolute;
-    border: 2px solid #e08787;
+    border: 2px solid var(--main-contact-color);
     top: -2%;
     left: 0;
     width: 95%;
@@ -314,7 +329,7 @@ hr:after {
 }
 
 .schedule-title {
-    color: var(--main-contact-color);
+    color: var(--services-color);
 }
 
 .schedule ul {
@@ -333,7 +348,7 @@ hr:after {
 }
 
 .time-detail a {
-    color: var(--main-contact-color);
+    color: #889dde;
 }
 
 @media screen and (max-width: 1200px) {
@@ -363,6 +378,9 @@ hr:after {
     .contacts {
         height: 40vh;
     }
+    .row-gallery {
+        margin-top: 5%;
+    }
 }
 
 @media screen and (orientation: portrait) and (max-width: 480px) {
@@ -372,11 +390,20 @@ hr:after {
     .intro-container h1 {
         font-size: 2rem;
     }
+    .gallery-description {
+        margin-top: 5%;
+    }
 }
 
 @media screen and (orientation: portrait) and (max-width: 767px) {
     .loader {
         width: 60%;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1024px) {
+    .row-gallery {
+        margin-top: 5%;
     }
 }
 
